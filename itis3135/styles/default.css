@@ -6,7 +6,7 @@ body{
     text-align: center;	
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: auto;
-    width: 80%;
+    width: 50%;
     align-content: center;
     
 }
@@ -29,6 +29,14 @@ a:hover{
     color: #a6db61;
     text-decoration: underline;
     filter: blur(1.25px);
+}
+
+a:visited{
+    color:#c1405a;
+}
+
+a:visited:hover{
+    color: #72a136;
 }
 
 h1{
