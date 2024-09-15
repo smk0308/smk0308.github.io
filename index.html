@@ -3,13 +3,16 @@
 	<head>
 		<title>Skylar Krupa's Site</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 		<style>
 			body{
-				background: #d8d0ca;
-				color: #433430;
-				text-align: center;
-				font-family: monospace;
+				background: linear-gradient(#e8e3e3 80%, #ffc4d0);
+				width: 100vw;
+				height: 100vh;
+				color: #1e181a;
+				text-align: center;	
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 				margin: auto;
 				width: 50%;
 				align-content: center;
@@ -19,28 +22,46 @@
 				max-width: 900px;
 			}
 			a:link{
-				color: #231815;
+				color: #e06880;
 				text-decoration: none;
 			}
 			a:hover{
-				color: #5a4b47;
+				color: #a6db61;
 				text-decoration: underline;
-			}
-			a:visited{
-				color: #5a4b47;
-				text-decoration: line-through;
+				filter: blur(1.25px);
 			}
 
 			h1{
 				font-size: 2rem;
+				animation: text 5s ease-in-out infinite;
 			}
 
-			.navigation{
+			nav{
 				font-size: 1rem;
 			}
 
 			h1:hover{
 				transform: scale(1.15);
+			}
+
+			img{
+				max-width: 60%;
+			}
+
+			img:hover{
+				transform: scale(1.25);
+			}
+			
+			@keyframes text{
+				0%{
+					color:#a6db61;
+				}
+				50%{
+					color: #e06880;
+				}
+				100%{
+					color:#a6db61;
+				}
 			}
 		</style>
 	</head>
@@ -49,16 +70,17 @@
 			<h1>Skylar Krupa</h1>
 		</header>
 		<main>
+			<img src="./itis3135/images/merengue.gif" alt="An animal crossing villager, a pink rhino with a strawberry for a horn, dancing."/>
 			<h2>Please have a look around!</h2>
 		</main>
 		<footer>
-			<nav class="navigation">
-				<a href ="itis3135/">ITIS3135 Course Site</a>|
-				<a href ="https://github.com/smkrupa" target="_new">Github</a>|
-				<a href ="https://smkrupa.github.io/" target="_new">Github.io</a>|
+			<nav>
+				<a href ="itis3135/">ITIS3135 Course Site</a> ✿
+				<a href ="https://github.com/smkrupa" target="_new">Github</a> ✿
+				<a href ="https://smkrupa.github.io/" target="_new">Github.io</a> ✿
 				<a href ="https://webpages.charlotte.edu/skrupa1/" target="_new">UNCC Webpage</a>
 			</nav>
 		</footer>
-		<p></p>
+
 	</body>
 </html>
