@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(#e4d0d0 80%, #ffc4d0);
+    background-image: linear-gradient(#f8e1e1 80%, #f1b6c1);
     background-attachment: fixed;
     background-size: cover;
     color: #1e181a;
@@ -69,6 +69,10 @@ ul{
 b{
     animation: text 5s ease-in-out infinite;
     text-shadow: 0px 1px black;
+}
+
+figcaption{
+    font-size: .8rem;
 }
 
 
