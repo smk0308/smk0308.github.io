@@ -54,7 +54,7 @@ h1 {
     font-size: 1.25rem;
 }
 
-main h1 {
+h2 {
     font-size: 2rem;
     animation: text 5s ease-in-out infinite;
     margin: 1%;
