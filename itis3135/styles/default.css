@@ -1,5 +1,5 @@
 html {
-    background-image: linear-gradient(#f8e1e1 80%, #f1b6c1);
+    background-image: linear-gradient(#f8e1e1 30%, #f1b6c1);
     background-attachment: fixed;
     background-size: cover;
     color: #1e181a;
@@ -20,19 +20,20 @@ body {
 }
 
 footer {
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 header,
 main,
 footer {
-    width: 95%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 a:link {
     color: #c24f66;
     text-decoration: none;
+    font-weight: bolder;
 }
 
 a:hover {
@@ -42,7 +43,7 @@ a:hover {
 }
 
 a:visited {
-    color: #a6db61;
+    color: #739c3d;
 }
 
 a:visited:hover {
@@ -53,7 +54,7 @@ h1 {
     font-size: 1.25rem;
 }
 
-h2 {
+main h1 {
     font-size: 2rem;
     animation: text 5s ease-in-out infinite;
     margin: 1%;
@@ -85,6 +86,7 @@ ul {
     overflow: wrap;
 }
 
+
 b {
     animation: text 5s ease-in-out infinite;
     text-shadow: 0px 1px black;
@@ -101,7 +103,7 @@ figcaption {
     }
 
     50% {
-        color: #e06880;
+        color: #bf5268;
     }
 
     100% {
