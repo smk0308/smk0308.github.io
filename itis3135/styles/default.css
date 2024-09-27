@@ -27,7 +27,7 @@ header,
 main,
 footer {
     width: 100%;
-    max-width: 1000px;
+    
 }
 
 a:link {
@@ -50,9 +50,14 @@ a:visited:hover {
     color: #72a136;
 }
 
+h3{
+    text-align: justify;
+}
+
 h1 {
     font-size: 1.25rem;
 }
+
 
 h2 {
     font-size: 2rem;
