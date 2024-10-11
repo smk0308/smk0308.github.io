@@ -1,33 +1,46 @@
 html {
-    background-image: linear-gradient(#f8e1e1 30%, #f1b6c1);
+    background-color: #f6efef;
     background-attachment: fixed;
     background-size: cover;
     color: #1e181a;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: auto;
-    width: 50%;
-    align-content: center;
 }
 
 body {
-    background-color: #fdf8f8;
     text-align: center;
-    margin: auto;
-    align-content: center;
-    border-radius: 10%;
-    box-shadow: 0px 0px 15px 15px #fdf8f8;
 }
 
-footer {
-    font-size: 1rem;
+main {
+    margin: auto;
+    max-width: 1400px;
+    align-content: center;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
 header,
-main,
 footer {
-    width: 100%;
-    
+    width: 100vw;
+}
+
+header nav {
+    margin-bottom: 2px;
+}
+
+footer {
+    height: calc(100% - 100px);
+    position: relative;
+    margin-top: 15px;
+}
+
+hr {
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    margin: auto;
+    filter: blur(.5px);
+    background: linear-gradient(90deg, #e94868, #a6db61);
 }
 
 a:link {
@@ -50,14 +63,9 @@ a:visited:hover {
     color: #72a136;
 }
 
-h3{
-    text-align: justify;
-}
-
 h1 {
     font-size: 1.25rem;
 }
-
 
 h2 {
     font-size: 2rem;
@@ -65,16 +73,21 @@ h2 {
     margin: 1%;
 }
 
-nav {
-    font-size: 1rem;
+h3 {
+    text-align: justify;
 }
+
+nav {
+    font-size: 1.15rem;
+}
+
 
 h2:hover {
     transform: scale(1.15);
 }
 
 img {
-    max-width: 50%;
+    max-width: 20%;
 }
 
 img:hover {
@@ -91,20 +104,73 @@ ul {
     overflow: wrap;
 }
 
+/* Media overrides */
 
-b {
-    animation: text 5s ease-in-out infinite;
-    text-shadow: 0px 1px black;
+/* Laptops and small screens */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    main {
+        margin: auto;
+        align-content: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
+
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        margin: auto;
+        align-content: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+
+/* Nobile devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        margin: auto;
+        align-content: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+
+/* Animated texts */
+b {
+    font-weight: bold;
+    animation: text 5s ease-in-out infinite;
+}
+
+footer b {
+    color: white;
+    animation: footers 5s ease-in-out infinite;
+    text-shadow: none;
+}
+
 
 figcaption {
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
-
+/* Keyframe animations */
 @keyframes text {
     0% {
-        color: #81b240;
+        color: #628e29;
+    }
+
+    50% {
+        color: #ac3950;
+    }
+
+    100% {
+        color: #628e29;
+    }
+}
+
+@keyframes footers {
+    0% {
+        color: #f1b6c1;
     }
 
     50% {
@@ -112,6 +178,6 @@ figcaption {
     }
 
     100% {
-        color: #81b240;
+        color: #f1b6c1;
     }
 }

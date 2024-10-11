@@ -4,87 +4,117 @@
 <head>
 	<title>Skylar Krupa's Site</title>
 	<meta charset="utf-8">
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	<style>
 		html {
-			background: linear-gradient(#f8e1e1 80%, #ffc4d0);
-			width: 100vw;
-			height: 100vh;
+			background-color: #f1e4e4;
+			background-attachment: fixed;
+			background-size: cover;
 			color: #1e181a;
 			text-align: center;
 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-			margin: auto;
-			width: 50%;
-			align-content: center;
 		}
 
 		body {
-			background-color: white;
-			border-radius: 10%;
-			box-shadow: 0px 0px 15px 15px white;
+			text-align: center;
+			margin: auto;
 		}
 
-		header,
-		main,
-		footer {
-			width: 95%;
-			max-width: 900px;
+		main {
+			margin: auto;
+			align-content: center;
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 1.2rem;
 		}
 
 		a:link {
 			color: #c24f66;
 			text-decoration: none;
+			font-weight: bolder;
 		}
 
 		a:hover {
-			color: #a6db61;
+			color: #75a733;
 			text-decoration: underline;
 			filter: blur(1.25px);
 		}
 
 		a:visited {
-			color: #a6db61;
+			color: #739c3d;
 		}
 
 		a:visited:hover {
-			color: #72a136;
+			color: #6a9e27;
 		}
 
 		h1 {
 			font-size: 2rem;
+			color: #689828;
+		}
+
+		h2 {
+			font-size: 2rem;
 			animation: text 5s ease-in-out infinite;
+			margin: 1%;
+		}
+
+		h3 {
+			text-align: justify;
 		}
 
 		nav {
-			font-size: 1rem;
+			font-size: 1.15rem;
 		}
 
-		h1:hover {
+
+		h2:hover {
 			transform: scale(1.15);
 		}
 
 		img {
-			max-width: 40%;
+			max-width: 30%;
 		}
 
 		img:hover {
-			transform: scale(1.25);
+			transform: scale(1.05);
+			filter: blur(1px);
+			z-index: -1;
 		}
 
+		footer b {
+			color: white;
+			animation: footers 5s ease-in-out infinite;
+			text-shadow: none;
+		}
 
 		@keyframes text {
 			0% {
-				color: #a6db61;
+				color: #628e29;
 			}
 
 			50% {
-				color: #e06880;
+				color: #ac3950;
 			}
 
 			100% {
-				color: #a6db61;
+				color: #628e29;
+			}
+		}
+
+		@keyframes footers {
+			0% {
+				color: #f1b6c1;
+			}
+
+			50% {
+				color: #bf5268;
+			}
+
+			100% {
+				color: #f1b6c1;
 			}
 		}
 	</style>
@@ -101,9 +131,9 @@
 	</main>
 	<footer>
 		<nav>
-			<a href="itis3135/">ITIS3135 Course Page</a> ✿
-			<a href="https://github.com/smkrupa" target="_new">Github</a> ✿
-			<a href="https://smkrupa.github.io/" target="_new">Github.io</a> ✿
+			<a href="itis3135/">ITIS3135 Course Page</a> <b>✿</b>
+			<a href="https://github.com/smkrupa" target="_new">Github</a> <b>✿</b>
+			<a href="https://smkrupa.github.io/" target="_new">Github.io</a> <b>✿</b>
 			<a href="https://webpages.charlotte.edu/skrupa1/" target="_new">UNCC Webpage</a>
 		</nav>
 	</footer>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Skylar Krupa | HTML Tables</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: #1e181a;
+
+        }
+
+        th {
+            animation: text 5s ease-in-out infinite;
+            font-weight: bold;
+        }
+
+        td,
+        th {
+            border: 1px solid #d3c6c6dd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eacfcf;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>HTML Tables</h2>
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>Skylar Krupa</td>
+                <td>skrupa1@charlotte.edu</td>
+                <td>$2,000,000</td>
+            </tr>
+            <tr>
+                <td>Peggy Krupa</td>
+                <td>peggylicious@gmail.com</td>
+                <td>$1,000,000</td>
+            </tr>
+            <tr>
+                <td>Erik Krupa</td>
+                <td>steelersfan82@yahoo.com</td>
+                <td>$900,000</td>
+            </tr>
+            <tr>
+                <td>Anakin Skywalker</td>
+                <td>ihatesand@aol.net</td>
+                <td>$300,000</td>
+            </tr>
+            <tr>
+                <td>Padme Amidala</td>
+                <td>queenofnaboo@gmail.com</td>
+                <td>$1,000,000</td>
+            </tr>
+            <tr>
+                <td>JarJar Binks</td>
+                <td>darthjarjar@aol.net</td>
+                <td>$500,000</td>
+            </tr>
+            <tr>
+                <td>Sheev Palpatine</td>
+                <td>notasith@hotmail.com</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <table>
+                <tr>
+                    <th id="co1" headers="blank">Category</th>
+                    <th id="co2" headers="blank">Name</th>
+                    <th id="co3" headers="blank">Email</th>
+                    <th id="co4" headers="blank">Salary</th>
+                    <th id="co5" headers="blank">Monthly Salary</th>
+                    <th id="co6" headers="blank">Years of Service</th>
+                </tr>
+                <tr>
+                    <td rowspan="2" headers="co1 c1">Boss</td>
+                    <td headers="co2 c1">Skylar Krupa</td>
+                    <td headers="co3 c1">skrupa1@charlotte.edu</td>
+                    <td headers="co4 c1">$2,000,000</td>
+                    <td headers="co5 c1">$166,666</td>
+                    <td headers="co6 c1">23</td>
+                </tr>
+                <tr>
+                    <td headers="co2 c2">Peggy Krupa</td>
+                    <td headers="co3 c2">peggylicious@gmail.com</td>
+                    <td headers="co4 c2">$1,000,000</td>
+                    <td headers="co5 c2">$83,333</td>
+                    <td headers="co6 c2">23</td>
+                </tr>
+                <tr>
+                    <td headers="co1 c3">Head Minion</td>
+                    <td headers="co1 c3">Erik Krupa</td>
+                    <td headers="co2 c3">steelersfan82@yahoo.com</td>
+                    <td headers="co3 c3">$900,000</td>
+                    <td headers="co4 c3">$75,000</td>
+                    <td headers="co5 c3">3</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" headers="co1 c4">Underlings</td>
+                    <td headers="co2 c4">Anakin Skywalker</td>
+                    <td headers="co3 c4">ihatesand@aol.net</td>
+                    <td headers="co4 c4">$300,000</td>
+                    <td headers="co5 c4">$25,000</td>
+                    <td headers="co6 c4">16</td>
+                </tr>
+                <tr>
+                    <td headers="co2 c5">Padme Amidala</td>
+                    <td headers="co3 c5">queenofnaboo@gmail.com</td>
+                    <td headers="co4 c5">$1,000,000</td>
+                    <td headers="co5 c5">$83,333</td>
+                    <td headers="co6 c5">16</td>
+                </tr>
+                <tr>
+                    <td headers="co2 c6">JarJar Binks</td>
+                    <td headers="co3 c6">darthjarjar@aol.net</td>
+                    <td headers="co4 c6">$500,000</td>
+                    <td headers="co5 c6">$41,666</td>
+                    <td headers="co6 c6">12</td>
+                </tr>
+                <tr>
+                    <td headers="co1 c7">Janitor</td>
+                    <td headers="co2 c7">Sheev Palpatine</td>
+                    <td headers="co3 c7">notasith@hotmail.com</td>
+                    <td headers="co4 c7">$100</td>
+                    <td headers="co5 c7">$8</td>
+                    <td headers="co6 c7">50</td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="total" scope="colgroup">Total Annual Salary Budget and Total Years of Service
+                    </td>
+                    <td headers="total salary">$5,700,100</td>
+                    <td headers="total years">142</td>
+                </tr>
+            </table>
+            <figcaption><em>Krupa Designs'</em> Employee Information</figcaption>
+        </figure>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/include.js"></script>
+</body>
+
+</html>
