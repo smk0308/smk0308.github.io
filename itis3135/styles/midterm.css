@@ -1,0 +1,172 @@
+html {
+    background: #292b2d;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 225px;
+    z-index: -1;
+    padding-top: 15px;
+}
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    margin: 0;
+    left: 25%;
+    font-size: 4rem;
+    z-index: -2;
+    color: #b02f34;
+    animation: h1 5s ease-in-out infinite;
+}
+
+main{
+    display: block;
+}
+
+
+.home-content{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    z-index: -2;
+    font-size: 1.7rem;
+    width: 40%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    font-style: italic;
+    width: 200px;
+}
+
+footer a{
+    color: #b02f34;
+    text-decoration: none;
+}
+
+/* Images */
+header img {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    z-index: 1;
+}
+main img{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    z-index: -3;
+    opacity: 15%;
+}
+
+main table img{
+    opacity: 100%;
+    z-index: -2;
+    width: 70%;
+    position: relative;
+    border-radius: 5%;
+    border: 5px solid #ffffff;
+}
+
+main table{
+    position: absolute;
+    padding: 15px;
+    width: 70%;
+    top: 15%;
+    left: 25%;
+    background: #121212;
+    max-width: 60%;
+    z-index: -2;
+    border-radius: 2%;
+}
+
+/* Tables and Forms */
+table {
+    border-collapse: separate;
+    border-spacing: 15px 5px;
+    text-align: left;
+}
+
+th{
+    font-size: 1.5rem;
+    color: #b02f34;
+}
+
+form {
+    width: 40%;
+    border-radius: 3%;
+    background: #0a0f19;
+}
+td{
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+button[type=submit],
+        button[type=button] {
+            color: #f5eef0;
+            font-weight: bold;
+            border-radius: 10%;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+            margin: 0 5px;
+            padding: 5px 10px;
+            background: #A82C2D;
+        }
+
+#species-dropdown, #class-dropdown{
+  position: absolute;
+  background-color: white;
+  border: 1px solid #11151C;
+  cursor: pointer;
+  border: none;
+  border-radius: 5%;
+  min-width: 160px;
+  padding: 2px 15px;
+  z-index: 1;
+  font-weight: bold;
+}   
+
+/* Header / ul */
+ul {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    padding: auto;
+    text-align: center;
+    list-style: none;
+}
+
+ul a {
+    color: white;
+    text-decoration: solid 2px #A82C2D;
+}
+
+ul a:hover {
+    color: #A82C2D;
+}
+
+/* Keyframes */
+@keyframes h1 {
+    0% {
+        color: #A82C2D;
+    }
+
+    50% {
+        color: #ffffff;
+    }
+
+    100% {
+        color: #A82C2D;
+    }
+}

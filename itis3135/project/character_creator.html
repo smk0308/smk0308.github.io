@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/midterm.css">
+    <title>Character Creation</title>
+</head>
+
+<body>
+    <header>
+        <div data-include="../components/project_header.html"></div>
+    </header>
+    <main>
+        <h1>Create Your Character</h1>
+        <form>
+            <table>
+
+                <tr>
+                    <td colspan="1" rowspan="2"><img src="../images/dwarf_female.png" id="avatar"> </td>
+                    <td colspan="5" id="name-cell">Name: <div id="chara-name">Kestrel Fizzleforge</div><button type="button" id="name-change">Roll</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td colspan="2"><input required type="radio" name="gender" value="male" id="male" onclick="dispRadio()">♂ <input required type="radio" name="gender" value="female" id="female" onclick="dispRadio()"
+                        checked="checked">♀</button></td>
+                </tr>
+                <tr>
+                    <td><label for="class-dropdown">Class:</label></td>
+                    <td><label for="species-dropdown">Species:</label></td>
+                </tr>
+                <tr>
+                    <td rowspawn="2">
+                        <select name="class-dropdown" id="class-dropdown">
+                            <option selected="selected">Barbarian</option>
+                            <option>Bard</option>
+                            <option>Rogue</option>
+                            <option>Sorcerer</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td rowspawn="2"><select name="species-dropdown" id="species-dropdown">
+                            <option selected="selected">Dwarf</option>
+                            <option>Human</option>
+                            <option>Elf</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Stats</th>
+                    <td colspan="3">Available Points: <div id="points">1</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Strength</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="str-base">15</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="str-mod"></div>
+                    </td>
+                    <td><button type="button" id="str-plus" onclick="incBase('str');">+</button></td>
+                    <td><button type="button" id="str-minus" onclick="decBase('str');">-</button></td>
+                </tr>
+                <tr>
+                    <td>Dexterity</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="dex-base">16</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="dex-mod">+4</div>
+                    </td>
+                    <td><button type="button" id="dex-plus" onclick="incBase('dex');">+</button></td>
+                    <td><button type="button" id="dex-minus" onclick="decBase('dex');">-</button></td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="int-base">3</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="int-mod">+0</div>
+                    </td>
+                    <td><button type="button" id="int-plus" onclick="incBase('int');">+</button></td>
+                    <td><button type="button" id="int-minus" onclick="decBase('int');">-</button></td>
+                </tr>
+                <tr>
+                    <td>Charisma</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="chr-base">3</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="chr-mod">+0</div>
+                    </td>
+                    <td><button type="button" id="chr-plus" onclick="incBase('chr');">+</button></td>
+                    <td><button type="button" id="chr-minus" onclick="decBase('chr');">-</button></td>
+                </tr>
+                <tr>
+                    <td>Wisdom</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="wis-base">3</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="wis-mod">+0</div>
+                    </td>
+                    <td><button type="button" id="wis-plus" onclick="incBase('wis');">+</button></td>
+                    <td><button type="button" id="wis-minus" onclick="decBase('wis');">-</button></td>
+                </tr>
+                <tr>
+                    <td>Constitution</td>
+                    <td>Base:</td>
+                    <td>
+                        <div id="con-base">3</div>
+                    </td>
+                    <td>Modifier:</td>
+                    <td>
+                        <div id="con-mod">+0</div>
+                    </td>
+                    <td><button type="button" id="con-plus" onclick="incBase('con');">+</button></td>
+                    <td><button type="button" id="con-minus" onclick="decBase('con');">-</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button></td>
+                    <td><button type="reset">Reset</button></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
+    </footer>
+    <script src="../scripts/project.js"></script>
+    <script src="../scripts/include.js"></script>
+</body>
+
+</html>

@@ -43,6 +43,7 @@ hr {
     background: linear-gradient(90deg, #e94868, #a6db61);
 }
 
+/* Link styles */
 a:link {
     color: #c24f66;
     text-decoration: none;
