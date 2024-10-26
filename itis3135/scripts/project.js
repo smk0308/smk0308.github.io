@@ -15,8 +15,6 @@ nameChange.addEventListener("click", () => {
 })
 
 /* Avatar Changing */
-var speciesNum = document.getElementById("species-dropdown");
-var species = speciesNum.options[speciesNum.selectedIndex].value;
 var avatar = document.getElementById("avatar");
 var gender = document.getElementsByName("gender");
 
@@ -24,7 +22,7 @@ function dispRadio() {
     for (i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
             if (gender[i].value === "male") {
-                switch (document.getElementById("species-dropdown").value) {
+                switch (document.getElementById("race-dropdown").value) {
                     case "Dwarf":
                         avatar.src = "../images/dwarf_male.png";
                         break;
@@ -36,7 +34,7 @@ function dispRadio() {
 
                 }
             } else {
-                switch (document.getElementById("species-dropdown").value) {
+                switch (document.getElementById("race-dropdown").value) {
                     case "Dwarf":
                         avatar.src = "../images/dwarf_female.png";
                         break;
@@ -142,109 +140,35 @@ userClass.addEventListener("change", () => {
 
 /* Plus and Minus Stats */
 
-function incBase(e) {
+function incBase(e, f) {
     var points = parseInt(document.getElementById("points").innerText);
     if (points > 0) {
-        switch (e) {
-            case "str":
-                var base = parseInt(document.getElementById("str-base").innerText);
-                document.getElementById("str-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("str");
-                break;
-            case "dex":
-                var base = parseInt(document.getElementById("dex-base").innerText);
-                document.getElementById("dex-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("dex");
-                break;
-            case "int":
-                var base = parseInt(document.getElementById("int-base").innerText);
-                document.getElementById("int-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("int");
-                break;
-            case "chr":
-                var base = parseInt(document.getElementById("chr-base").innerText);
-                document.getElementById("chr-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("chr");
-                break;
-            case "wis":
-                var base = parseInt(document.getElementById("wis-base").innerText);
-                document.getElementById("wis-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("wis");
-                break;
-            case "con":
-                var base = parseInt(document.getElementById("con-base").innerText);
-                document.getElementById("con-base").innerText = base + 1;
-                points--;
-                document.getElementById("points").innerText = points;
-                checkMod("con");
-                break;
-        }
+        document.getElementById(e).innerText = parseInt(document.getElementById(e).innerText) + 1;
+        points--;
+        document.getElementById("points").innerText = points;
+        checkMod(parseInt(document.getElementById(e)), f);
     } else {
         alert("You have no points to spend!");
     }
 }
 
-function decBase(e) {
+function decBase(e, f) {
     var points = parseInt(document.getElementById("points").innerText);
-    switch (e) {
-        case "str":
-            var base = parseInt(document.getElementById("str-base").innerText);
-            document.getElementById("str-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("str");
-            break;
-        case "dex":
-            var base = parseInt(document.getElementById("dex-base").innerText);
-            document.getElementById("dex-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("dex");
-            break;
-        case "int":
-            var base = parseInt(document.getElementById("int-base").innerText);
-            document.getElementById("int-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("int");
-            break;
-        case "chr":
-            var base = parseInt(document.getElementById("chr-base").innerText);
-            document.getElementById("chr-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("chr");
-            break;
-        case "wis":
-            var base = parseInt(document.getElementById("wis-base").innerText);
-            document.getElementById("wis-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("wis");
-            break;
-        case "con":
-            var base = parseInt(document.getElementById("con-base").innerText);
-            document.getElementById("con-base").innerText = base - 1;
-            points++;
-            document.getElementById("points").innerText = points;
-            checkMod("con");
-            break;
-    }
+    document.getElementById(e).innerText = parseInt(document.getElementById(e).innerText) - 1;
+    points++;
+    document.getElementById("points").innerText = points;
+    checkMod(parseInt(document.getElementById(e)), f);
 }
 
 
-function checkMod() {
-
+function checkMod(e,f) {
+    if (e >= 4 && e <= 18) {
+        document.getElementById(f).innerText = e / 4;
+    } else if (e < 4) {
+        document.getElementById(f).innerText = 0;
+    } else { 
+        alert("Stat is not within range!");
+    }
 }
 
 /* Reset Form to Starting Values */

@@ -18,18 +18,19 @@
             <table>
 
                 <tr>
-                    <td colspan="1" rowspan="2"><img src="../images/dwarf_female.png" id="avatar"> </td>
-                    <td colspan="5" id="name-cell">Name: <div id="chara-name">Kestrel Fizzleforge</div><button type="button" id="name-change">Roll</button>
+                    <td rowspan="2"><img src="../images/dwarf_female.png" id="avatar"> </td>
+                    <td colspan="4" id="name-cell">Name: <div id="chara-name">Kestrel Fizzleforge</div>
                     </td>
+                    <td><button type="button" id="name-change">Roll</button></td>
                 </tr>
                 <tr>
-                    <td>Gender: </td>
+                    <td><label for="gender">Gender:</label> </td>
                     <td colspan="2"><input required type="radio" name="gender" value="male" id="male" onclick="dispRadio()">♂ <input required type="radio" name="gender" value="female" id="female" onclick="dispRadio()"
                         checked="checked">♀</button></td>
                 </tr>
                 <tr>
                     <td><label for="class-dropdown">Class:</label></td>
-                    <td><label for="species-dropdown">Species:</label></td>
+                    <td><label for="race-dropdown">Races:</label></td>
                 </tr>
                 <tr>
                     <td rowspawn="2">
@@ -40,12 +41,11 @@
                             <option>Sorcerer</option>
                         </select>
                     </td>
-                    <td></td>
-                    <td rowspawn="2"><select name="species-dropdown" id="species-dropdown">
-                            <option selected="selected">Dwarf</option>
-                            <option>Human</option>
-                            <option>Elf</option>
-                        </select></td>
+                    <td rowspawn="2"><select name="race-dropdown" id="race-dropdown">
+                        <option selected="selected">Dwarf</option>
+                        <option>Human</option>
+                        <option>Elf</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td>
@@ -54,7 +54,7 @@
                 </tr>
                 <tr>
                     <th>Stats</th>
-                    <td colspan="3">Available Points: <div id="points">1</div>
+                    <td colspan="3">Available Points: <div id="points">10</div>
                     </td>
                 </tr>
                 <tr>
@@ -65,75 +65,75 @@
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="str-mod"></div>
+                        <span>+</span><div id="str-mod">3</div>
                     </td>
-                    <td><button type="button" id="str-plus" onclick="incBase('str');">+</button></td>
-                    <td><button type="button" id="str-minus" onclick="decBase('str');">-</button></td>
+                    <td><button type="button" id="str-plus" onclick="incBase('str-base','str-mod');">+</button></td>
+                    <td><button type="button" id="str-minus" onclick="decBase('str-base','str-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>Dexterity</td>
                     <td>Base:</td>
                     <td>
-                        <div id="dex-base">16</div>
+                        <div id="dex-base">13</div>
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="dex-mod">+4</div>
+                        <span>+</span><div id="dex-mod">3</div>
                     </td>
-                    <td><button type="button" id="dex-plus" onclick="incBase('dex');">+</button></td>
-                    <td><button type="button" id="dex-minus" onclick="decBase('dex');">-</button></td>
+                    <td><button type="button" id="dex-plus" onclick="incBase('dex-base','dex-mod');">+</button></td>
+                    <td><button type="button" id="dex-minus" onclick="decBase('dex-base','dex-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>Intelligence</td>
                     <td>Base:</td>
                     <td>
-                        <div id="int-base">3</div>
+                        <div id="int-base">8</div>
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="int-mod">+0</div>
+                        <span>+</span><div id="int-mod">2</div>
                     </td>
-                    <td><button type="button" id="int-plus" onclick="incBase('int');">+</button></td>
-                    <td><button type="button" id="int-minus" onclick="decBase('int');">-</button></td>
+                    <td><button type="button" id="int-plus" onclick="incBase('int-base','int-mod');">+</button></td>
+                    <td><button type="button" id="int-minus" onclick="decBase('int-base','int-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>Charisma</td>
                     <td>Base:</td>
                     <td>
-                        <div id="chr-base">3</div>
+                        <div id="chr-base">10</div>
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="chr-mod">+0</div>
+                        <span>+</span><div id="chr-mod">2</div>
                     </td>
-                    <td><button type="button" id="chr-plus" onclick="incBase('chr');">+</button></td>
-                    <td><button type="button" id="chr-minus" onclick="decBase('chr');">-</button></td>
+                    <td><button type="button" id="chr-plus" onclick="incBase('chr-base','chr-mod');">+</button></td>
+                    <td><button type="button" id="chr-minus" onclick="decBase('chr-base','chr-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>Wisdom</td>
                     <td>Base:</td>
                     <td>
-                        <div id="wis-base">3</div>
+                        <div id="wis-base">12</div>
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="wis-mod">+0</div>
+                        <span>+</span><div id="wis-mod">3</div>
                     </td>
-                    <td><button type="button" id="wis-plus" onclick="incBase('wis');">+</button></td>
-                    <td><button type="button" id="wis-minus" onclick="decBase('wis');">-</button></td>
+                    <td><button type="button" id="wis-plus" onclick="incBase('wis-base','wis-mod');">+</button></td>
+                    <td><button type="button" id="wis-minus" onclick="decBase('wis-base','wis-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>Constitution</td>
                     <td>Base:</td>
                     <td>
-                        <div id="con-base">3</div>
+                        <div id="con-base">14</div>
                     </td>
                     <td>Modifier:</td>
                     <td>
-                        <div id="con-mod">+0</div>
+                        <span>+</span><div id="con-mod">3</div>
                     </td>
-                    <td><button type="button" id="con-plus" onclick="incBase('con');">+</button></td>
-                    <td><button type="button" id="con-minus" onclick="decBase('con');">-</button></td>
+                    <td><button type="button" id="con-plus" onclick="incBase('con-base','con-mod');">+</button></td>
+                    <td><button type="button" id="con-minus" onclick="decBase('con-base','con-mod');">-</button></td>
                 </tr>
                 <tr>
                     <td>
@@ -142,12 +142,12 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit">Submit</button></td>
                     <td><button type="reset">Reset</button></td>
                     <td></td>
                 </tr>
             </table>
         </form>
+        <img src="../images/dice.png">
     </main>
     <footer>
         <hr>
