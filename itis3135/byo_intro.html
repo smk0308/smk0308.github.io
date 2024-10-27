@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Skylar Krupa | BYO Intro</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+        }
+
+        button {
+            color: #f5eef0;
+            font-weight: bold;
+            border: 1px solid #c77a8a;
+            border-radius: 5%;
+            font-size: .9rem;
+            cursor: pointer;
+            margin-top: 15px;
+            padding: 3px 10px;
+            box-shadow: 1px 1px 4px #c77a8a;
+            background: linear-gradient(#f699ac, #d1667c);
+        }
+
+        button:hover {
+            color: #e5f4d1;
+            border: 1px solid #72a136;
+            background: linear-gradient(#a6db61, #72a136);
+        }
+
+        form {
+            margin: auto;
+            max-width: 550px;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            margin: auto;
+        }
+
+        td,
+        tr {
+            width: 100%;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page! ◝(ᵔᗜᵔ)◜</h3>
+        <form id="byo-form">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name"><b>Name</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input required type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mascot"><b>Mascot</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input required type="text" name="mascot" id="mascot"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="image"><b>Image</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="file" id="image" accept="image/png, image/jpeg">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="image-caption"><b>Image Caption</b></label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="caption" id="caption">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="personal-background"><b>Personal Background</b></label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="personal-background" id="personal-background">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="professional-background"><b>Professional Background</b></label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="professional-background" id="professional-background">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="academic-background"><b>Academic Background</b></label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="academic-background" id="academic-background">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="web-background"><b>Background in Web Development</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="web-background" id="web-background">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="platform"><b>Primary Computer Platform</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="platform" id="platform">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="courses"><b>Courses Currently Taking</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" name="courses" id="courses-button">Add Course</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="funny"><b>Funny tidbit about yourself?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="funny" id="funny">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anything"><b>Anything Else?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input required type="text" name="platform" id="platform">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="agree">
+                            <input type="checkbox" id="agree"> I understand that what is on this page is not password
+                            protected and I will not put anything here that I don’t want publicly available.
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="Submit" id="submit">Submit</button> <button type="reset"
+                            value="Reset" id="reset">Reset</button></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/include.js"></script>
+</body>
+
+</html>
