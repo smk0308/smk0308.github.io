@@ -14,6 +14,18 @@ nameChange.addEventListener("click", () => {
     charaName.textContent = names[randomName];
 })
 
+
+function toggleSection(e) {
+    document.getElementById('home-section').style.display = "none";
+    document.getElementById('campaign-section').style.display = "none";
+    document.getElementById('dm-section').style.display = "none";
+    document.getElementById('character-section').style.display = "none";
+    document.getElementById('apply-section').style.display = "none";
+
+    document.getElementById(e).style.display = "block";
+
+}
+
 /* Avatar Changing */
 var avatar = document.getElementById("avatar");
 var gender = document.getElementsByName("gender");
@@ -161,18 +173,18 @@ function decBase(e, f) {
 }
 
 
-function checkMod(e,f) {
+function checkMod(e, f) {
     if (e >= 4 && e <= 18) {
         document.getElementById(f).innerText = e / 4;
     } else if (e < 4) {
         document.getElementById(f).innerText = 0;
-    } else { 
+    } else {
         alert("Stat is not within range!");
     }
 }
 
 /* Reset Form to Starting Values */
 function resetForm() {
-    return;
+    avatar.src = "../images/dwarf_female.png";
 }
 

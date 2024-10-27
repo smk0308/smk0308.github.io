@@ -15,6 +15,10 @@
 
         }
 
+        h3{
+            animation: text 5s ease-in-out infinite;
+        }
+
         th {
             animation: text 5s ease-in-out infinite;
             font-weight: bold;
@@ -25,8 +29,11 @@
             border: 1px solid #d3c6c6dd;
         }
 
-        tr:nth-child(even) {
+        tr:nth-child(odd) {
             background-color: #eacfcf;
+        }
+        ol{
+            text-align: left;
         }
     </style>
 </head>
@@ -37,6 +44,16 @@
     </header>
     <main>
         <h2>HTML Tables</h2>
+        <h3>List of Employees</h3>
+        <ol>
+            <li>Skylar Krupa, skrupa1@charlotte.edu, $2,000,000</li>
+            <li>Peggy Krupa, peggylicious@gmail.com, $1,000,000</li>
+            <li>Erik Krupa, steelersfan82@yahoo.com, $900,000</li>
+            <li>Anakin Skywalker, ihatesand@aol.net, $300,000</li>
+            <li>Padme Amidala, queenofnaboo@gmail.com, $1,000,000</li>
+            <li>JarJar Binks, darthjarjar@aol.net, $500,000</li>
+            <li>Sheev Palpatine, notasith@hotmail.com, $100</li>
+        </ol>
         <h3>Employee Data in Simple Table</h3>
         <table>
             <tr>
@@ -145,9 +162,10 @@
                     <td headers="co6 c7">50</td>
                 </tr>
                 <tr>
-                    <td colspan="4" id="total" scope="colgroup">Total Annual Salary Budget and Total Years of Service
+                    <td colspan="3" id="total" scope="colgroup">Total Annual Salary Budget and Total Years of Service
                     </td>
                     <td headers="total salary">$5,700,100</td>
+                    <td headers="total monthly salary">$475,006</td>
                     <td headers="total years">142</td>
                 </tr>
             </table>

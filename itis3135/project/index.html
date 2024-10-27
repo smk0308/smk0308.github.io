@@ -4,30 +4,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/midterm.css">
+    <link rel="stylesheet" href="../styles/project.css">
     <title>Home</title>
 </head>
 
 <body>
     <header>
-        <div data-include="../components/project_header.html"></div>
+        <img src="../images/logo.png">
+        <ul>
+            <hr>
+            <li><a href="#" onclick="toggleSection('home-section')">Home</a></li>
+            <li><a href="#" onclick="toggleSection('campaign-section')">Campaign Info</a></li>
+            <li><a href="#" onclick="toggleSection('dm-section')">DM Info</a></li>
+            <li><a href="#" onclick="toggleSection('character-section')">Character Creator</a></li>
+            <li><a href="#" onclick="toggleSection('apply-section')">Application</a></li>
+        </ul>
     </header>
     <main>
-        <h1>Home</h1>
-        <p class="home-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-        <img src="../images/dicey.png">
-    </main>
-    <footer>
-        <hr>
-        <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
-    </footer>
-    <script src="../scripts/midterm.js"></script>
-    <script src="../scripts/include.js"></script>
+        <section id="home-section">
+            <h1>Home</h1>
+            <p class="home-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.</p>
+        </section>
+        <section id="campaign-section">
+            <h1>Campaign Info</h1>
+            <p class="home-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.</p>
+        </section>
+        <section id="dm-section">
+            <h1>Meet The DM</h1>
+            <p class="home-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.</p>
+        </section>
+        <section id="character-section">
+            <h1>Create Your Character</h1>
+            <form>
+                <table>
+    
+                    <tr>
+                        <td rowspan="2"><img src="../images/dwarf_female.png" id="avatar"> </td>
+                        <td colspan="4" id="name-cell">Name: <div id="chara-name">Kestrel Fizzleforge</div>
+                        </td>
+                        <td><button type="button" id="name-change">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender:</label> </td>
+                        <td colspan="2"><input required type="radio" name="gender" value="male" id="male" onclick="dispRadio()">♂ <input required type="radio" name="gender" value="female" id="female" onclick="dispRadio()"
+                            checked="checked">♀</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="class-dropdown">Class:</label></td>
+                        <td><label for="race-dropdown">Races:</label></td>
+                    </tr>
+                    <tr>
+                        <td rowspawn="2">
+                            <select name="class-dropdown" id="class-dropdown">
+                                <option selected="selected">Barbarian</option>
+                                <option>Bard</option>
+                                <option>Rogue</option>
+                                <option>Sorcerer</option>
+                            </select>
+                        </td>
+                        <td rowspawn="2"><select name="race-dropdown" id="race-dropdown">
+                            <option selected="selected">Dwarf</option>
+                            <option>Human</option>
+                            <option>Elf</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Stats</th>
+                        <td colspan="3">Available Points: <div id="points">10</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Strength</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="str-base">15</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="str-mod">3</div>
+                        </td>
+                        <td><button type="button" id="str-plus" onclick="incBase('str-base','str-mod');">+</button></td>
+                        <td><button type="button" id="str-minus" onclick="decBase('str-base','str-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dexterity</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="dex-base">13</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="dex-mod">3</div>
+                        </td>
+                        <td><button type="button" id="dex-plus" onclick="incBase('dex-base','dex-mod');">+</button></td>
+                        <td><button type="button" id="dex-minus" onclick="decBase('dex-base','dex-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>Intelligence</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="int-base">8</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="int-mod">2</div>
+                        </td>
+                        <td><button type="button" id="int-plus" onclick="incBase('int-base','int-mod');">+</button></td>
+                        <td><button type="button" id="int-minus" onclick="decBase('int-base','int-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>Charisma</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="chr-base">10</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="chr-mod">2</div>
+                        </td>
+                        <td><button type="button" id="chr-plus" onclick="incBase('chr-base','chr-mod');">+</button></td>
+                        <td><button type="button" id="chr-minus" onclick="decBase('chr-base','chr-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>Wisdom</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="wis-base">12</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="wis-mod">3</div>
+                        </td>
+                        <td><button type="button" id="wis-plus" onclick="incBase('wis-base','wis-mod');">+</button></td>
+                        <td><button type="button" id="wis-minus" onclick="decBase('wis-base','wis-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>Constitution</td>
+                        <td>Base:</td>
+                        <td>
+                            <div id="con-base">14</div>
+                        </td>
+                        <td>Modifier:</td>
+                        <td>
+                            <span>+</span><div id="con-mod">3</div>
+                        </td>
+                        <td><button type="button" id="con-plus" onclick="incBase('con-base','con-mod');">+</button></td>
+                        <td><button type="button" id="con-minus" onclick="decBase('con-base','con-mod');">-</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="reset">Reset</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <section id="apply-section">
+            <h1>Apply</h1>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="name"><b>Name</b></label></td>
+                </tr>
+                <tr>
+                    <td><input required type="text" id="name" name="name" placeholder="ex. John Smith"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone-number"><b>Phone Number</b></label></td>
+                </tr>
+                <tr>
+                    <td><input required type="number" id="phone-number" name="phone-number"
+                            placeholder="ex. (999)-123-4567"></td>
+                </tr>
+                <tr>
+                    <td><label for="email"><b>Email</b></label></td>
+                </tr>
+                <tr>
+                    <td><input required type="email" id="email" name="email" placeholder="ex. calicokitty@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <legend><b>Whats your favorite class?</b></legend>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="barbarian"><input required type="checkbox" name="barbarian">Barbarian</label></td>
+                </tr>
+                <tr>
+                    <td><label for="bard"><input required type="checkbox" name="bard">Bard</label></td>
+                </tr>
+                <tr>
+                    <td><label for="rogue"><input required type="checkbox" name="rogue">Rogue</label></td>
+                </tr>
+                <tr>
+                    <td><label for="sorcerer"><input required type="checkbox" name="sorcerer">Sorcerer</label></td>
+                </tr>
+                <tr>
+                    <td><label for="other"><input required type="checkbox" name="other">Other</label></td>
+                </tr>
+                <tr>
+                    <td><label for="radio"><b>Would you like alerts about new products?</b></label></td>
+                </tr>
+                <tr>
+                    <td><input required type="radio" name="radio" value="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td><input required type="radio" name="radio" value="no">No</td>
+                </tr>
+                <tr>
+                    <td><label for="how-heard-dropdown"><b>How did you hear about us?</b></label></td>
+                </tr>
+                <tr>
+                    <td><select name="how-heard-dropdown" id="how-heard-dropdown">
+                            <option disabled selected> Please select an option.</option>
+                            <option>Through a friend.</option>
+                            <option>From a family member.</option>
+                            <option>Google search.</option>
+                            <option>Prefer not to answer.</option>
+                        </select></td>
+                </tr>
+                <td><button type="submit" action="#">Submit</button>
+                    <button type="button" action="#">Reset</button></td>
+            </table>
+        </form>
+        <img src="../images/dice.png">
+        </section>
+        <img src="../images/dice.png">
+        <footer>
+            <hr>
+            <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
+        </footer>
+        <script src="../scripts/project.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Skylar Krupa | First Scripts</title>
+    <style>
+        input[type=text] {
+            width: 250px;
+        }
+
+        button[type=button] {
+            color: #f5eef0;
+            font-weight: bold;
+            border: 1px solid #c77a8a;
+            border-radius: 5%;
+            font-size: .9rem;
+            cursor: pointer;
+            margin-top: 15px;
+            padding: 3px 10px;
+            box-shadow: 1px 1px 4px #c77a8a;
+            background: linear-gradient(#f699ac, #d1667c);
+        }
+
+        button:hover {
+            color: #e5f4d1;
+            border: 1px solid #72a136;
+            background: linear-gradient(#a6db61, #72a136);
+        }
+
+        form {
+            margin: auto;
+            max-width: 550px;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            margin: auto;
+        }
+
+        td,
+        tr {
+            width: 100%;
+        }
+
+        table img{
+            max-height: 250px;
+            max-width: 500px;
+            border: 5px solid white;
+        }
+
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>First Scripts</h2>
+        <h3 id="date-time"></h3>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="user-name"><b>What's your name?</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Enter your name!" id="user-name" name="user-name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="user-mood"><b>How are you doing?</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Enter your mood!" id="user-mood" name="user-mood"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" id="greet-button">Submit Name And Mood</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="user-number"><b>What is your favorite number 0-10?</b></label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Your fave # here!" id="user-number" name="user-number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" id="poly-button">Submit Number</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="cat-name"><b>What is your cat's name?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Enter cat's name!" id="cat-name" name="cat-name">
+                    </td>
+                    <tr>
+                        <td><button type="button" id="cat-name-button">Submit Cat Name</button></td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="cat-name"><b>How old is your cat?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Enter cat's age!" id="cat-age" name="cat-age">
+                    </td>
+                    <tr>
+                        <td><button type="button" id="cat-age-button">Submit Cat Age</button></td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="cat-activity"><b>What kind of activity does your cat enjoy?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Enter cat's favorite activity!" id="cat-activity" name="cat-activity">
+                    </td>
+                    <tr>
+                        <td><button type="button" id="cat-activity-button">Submit Cat Activity</button></td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="cat-weight"><b>How much does your kitty weigh?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Enter cat's weight!" id="cat-weight" name="cat-weight">
+                    </td>
+                    <tr>
+                        <td><button type="button" id="cat-weight-button">Submit Cat Weight</button></td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="yes-no"><b>Does this look like your cat?</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./images/cat-1.jpg" id="cat-img" alt="A picture of a cat.">
+                    </td>
+                    <tr>
+                        <td><button type="button" id="yes-button">Yes</button> <button type="button" id="no-button">No</button></td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/include.js"></script>
+    <script src="scripts/defaultscripts.js"></script>
+</body>
+
+</html>
