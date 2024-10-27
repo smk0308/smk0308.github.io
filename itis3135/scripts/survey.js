@@ -29,8 +29,26 @@ resetButton.addEventListener("click", () => {
 /* Add new course text box */
 
 const courseButton = document.getElementById("courses-button");
+var counter = 0;
 
-courseButton.addEventListener("click", (event) => { 
-    preventDefault();
+courseButton.addEventListener("click", () => { 
+    counter++;
+
+    const courseInput = document.createElement('input');    
+    courseInput.type = 'text';
+    courseInput.id = `course-${counter}`;
+
+    const courseInfo = document.createElement('input');
+    courseInfo.type = 'text';
+    courseInfo.id = `course-info-${counter}`;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.type = 'button';
+    deleteButton.id = `delete-${counter}`;
+    deleteButton.addEventListener("click", () => { 
+        document.getElementById(`course-${counter}`).remove;
+        document.getElementById(`course-info-${counter}`).remove;
+        document.getElementById(`delete-${counter}`).remove;
+    });
     
 });
