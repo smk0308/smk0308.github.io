@@ -16,34 +16,62 @@ h1 {
     animation: h1 5s ease-in-out infinite;
 }
 
-.home-content {
+#gallery {
+    width: 500px;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+#gallery img {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #505457;
+    border-radius: 2%;
+}
+
+#gallery button {
+    width: 65px;
+    height: 25px;
+}
+
+#home-content,
+#campaign-content,
+#dm-content {
     position: absolute;
     top: 15%;
+    margin: auto;
     left: 25%;
     z-index: -2;
     font-size: 1.7rem;
-    width: 40%;
+    max-width: 70%;
 }
 
-#home-section{
+#note, #contact {
+    font-size: 1rem;
+}
+
+
+#home-section {
     display: block;
 }
 
-#character-section{
+#character-section {
     display: none;
 }
 
-#dm-section{
+#dm-section {
     display: none;
 }
 
-#apply-section{
+#apply-section {
     display: none;
 }
 
-#campaign-section{
+#campaign-section {
     display: none;
 }
+
 
 /* Footer */
 footer {
@@ -60,8 +88,9 @@ footer hr {
 }
 
 footer a {
-    color: #b02f34;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: 800;
 }
 
 /* Images */
@@ -72,14 +101,20 @@ header img {
     z-index: 1;
 }
 
-main img {
+#bg-img {
+    max-width: 900px;
     position: fixed;
     right: 0;
+    bottom: 0;
     z-index: -3;
     opacity: 15%;
 }
 
-main table img {
+fieldset{
+    border: none;
+}
+
+#character-creator img {
     opacity: 100%;
     z-index: -2;
     width: 170px;
@@ -88,7 +123,65 @@ main table img {
     border: 2px solid #ffffff;
 }
 
-main table {
+
+/* Tables and Forms */
+#character-creator {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid #121212;
+    width: 900px;
+    min-width: 650px;
+    top: 15%;
+    margin: 0;
+    left: 25%;
+    background: linear-gradient(45deg, #121212 60%, #292b2d);
+    max-width: 60%;
+    z-index: -2;
+    border-radius: 2%;
+    border-collapse: seperate;
+    border-spacing: 10px 5px;
+    margin: 0;
+    text-align: left;
+}
+
+#character-creator div {
+    display: inline-block
+}
+
+#character-creator span {
+    display: inline-block;
+}
+
+#character-creator th {
+    font-size: 1.5rem;
+    color: #b02f34;
+}
+
+#character-form {
+    width: 40%;
+    border-radius: 3%;
+    background: #0a0f19;
+}
+
+#character-creator td {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+#name-row {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#chara-name {
+    display: inline-block;
+}
+
+#name-change {
+    width: 45px;
+}
+
+#application-table {
     position: absolute;
     padding: 5px;
     border: 1px solid #121212;
@@ -100,51 +193,30 @@ main table {
     max-width: 60%;
     z-index: -2;
     border-radius: 2%;
-}
-
-/* Tables and Forms */
-table {
     border-collapse: seperate;
     border-spacing: 10px 5px;
     margin: 0;
     text-align: left;
 }
 
-table div {
-    display: inline-block
+#application-table input[type=checkbox] {
+    background-color: #eee;
+    cursor: pointer;
 }
 
-table span {
-    display: inline-block;
-}
-
-th {
+#application-table th {
     font-size: 1.5rem;
-    color: #b02f34;
+    color: #A82C2D;
 }
 
-form {
-    width: 40%;
-    border-radius: 3%;
-    background: #0a0f19;
+#application-table input[type=text],
+#application-table input[type=tel],
+#application-table input[type=email] {
+    min-width: 450px;
 }
 
-td {
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-#name-cell {
-    font-size: 1.6rem;
-}
-
-#chara-name {
-    display: inline-block;
-    font-size: 1.5rem;
-}
-
-#name-change {
-    width: 45px;
+#application-table button {
+    width: 75px
 }
 
 /* Inputs, dropdowns, buttons */
@@ -173,8 +245,8 @@ button[type=reset] {
     border-radius: 10%;
     margin: 0 5px;
     padding: 5px 10px;
-    border: 1px solid #ffffff;
-    background: #A82C2D;
+    border: none;
+    background: linear-gradient(-45deg, #4f1010, #A82C2D);
     cursor: pointer;
 }
 
@@ -184,11 +256,11 @@ button[type=button] {
     font-weight: bold;
     border-radius: 10%;
     width: 25px;
-    border: 1px solid #ffffff;
+    border: none;
     cursor: pointer;
     margin: 0 5px;
     padding: 5px 10px;
-    background: #A82C2D;
+    background: linear-gradient(-45deg, #4f1010, #A82C2D);
 }
 
 #race-dropdown,

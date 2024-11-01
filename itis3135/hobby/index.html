@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Site</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            background: #09080b;
+            color: #CCC9DC;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            align-items: flex-start;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            font-size: 4rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: -2;
+            color: #324A5F;
+            animation: h1 5s ease-in-out infinite;
+        }
+
+        nav {
+            gap: 1rem;
+            margin-top: 20px;
+            display: inline-block;
+            flex-flow: row wrap;
+        }
+
+        section {
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+
+        fieldset {
+            width: 250px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            max-width: 800px;
+        }
+
+        button {
+            cursor: pointer;
+            margin: 15px;
+            font-size: 1.2rem;
+            color: #f5eef0;
+            font-weight: bold;
+            border: 4px outset #3f4144;
+            background: #09080b;
+            cursor: pointer;
+            display: inline-block;
+            flex-flow: row wrap;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer a {
+            color: #7896b1;
+            text-decoration: none;
+        }
+
+        #played-before {
+            width: 350px;
+        }
+
+        span {
+            width: 400px;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            text-wrap: balance;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #what {
+            display: block;
+        }
+
+        #who {
+            display: none;
+        }
+
+        #why {
+            display: none;
+        }
+
+        #when {
+            display: none;
+        }
+
+        #how {
+            display: none;
+        }
+
+        a {
+            color: #446b8d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        img {
+            border: 1px solid white;
+            border-radius: 1%;
+        }
+
+        legend {
+            text-align: left;
+        }
+
+        figcaption {
+            font-size: 1.1rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        #next {
+            text-align: center;
+        }
+
+        h2 {
+            margin: auto;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ol {
+            text-align: left;
+        }
+
+        #text-field,
+        #question {
+            width: 450px;
+        }
+
+        textarea {
+            width: 450px;
+            height: 150px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @keyframes h1 {
+            0% {
+                color: #324A5F;
+            }
+
+            50% {
+                color: #ffffff;
+            }
+
+            100% {
+                color: #324A5F;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Video Game Hobby Site</h1>
+        <nav>
+            <button id="what-btn">What</button> <button id="who-btn">Who</button> <button id="when-btn">When</button>
+            <button id="how-btn">How</button> <button id="why-btn">Why</button>
+        </nav>
+    </header>
+    <main>
+        <section id="what">
+            <span>
+                <h2>What?</h2>
+                <h3>This hobby site is for video games!</h3>
+                <p>So, what exactly are video games, for those who may not know?</p>
+                <figure>
+                    <img src="images/skyrim-beach.webp" alt="A gif of a beach, from Skyrim.">
+                    <figcaption>A beach from Skyrim, gif made by <a
+                            href="https://oreliel-from-valinor.tumblr.com/tagged/skyrim">oreliel-from-valinor</a>.
+                    </figcaption>
+                </figure>
+                <p>Video games are digital games with stunning graphics and audio to captivate a player and draw them
+                    in, where a player can control a character within this digital space. Video games can range from simple farming simulators and puzzles to role-playing games and
+                    competitive online gaming. Video games are available on a large selection of platforms for any kind
+                    of player!
+                </p>
+            </span>
+        </section>
+        <section id="who">
+            <span>
+                <h2>Who Plays Video Games?</h2>
+                <h3>Everyone is capable of playing video games!</h3>
+                <figure>
+                    <img src="images/whiterun.webp" alt="A gif of Whiterun, from Skyrim.">
+                    <figcaption>The city of Whiterun from Skyrim, gif made by <a
+                            href="https://oreliel-from-valinor.tumblr.com/tagged/skyrim">oreliel-from-valinor</a>.
+                    </figcaption>
+                </figure>
+                <p>Video games can be played by anyone of any age. Video games are designed for a wide range of age and
+                    skill groups.
+                    Some games are even created for specific demographics, such as children or older people. Video games
+                    for younger
+                    people often focus on a learning experience for mental development.
+                </p>
+                <p>
+                    In recent years, video games have become more and more inclusive to those who may require more
+                    accessibility while playing. This accessibility can
+                    range from colorblind options, to subtitles, and other options for those who may be hearing impared.
+                </p>
+                <form>
+                    <fieldset id="played-before">
+                        <legend>Have you ever played video games?</legend>
+                        <input required type="radio" name="radio" id="yes" value="yes"><label for="yes">Yes</label>
+
+                        <input required type="radio" name="radio" id="no" value="no"><label for="no">No</label>
+                    </fieldset>
+                    <button type="submit" action="#">Submit</button>
+                </form>
+            </span>
+        </section>
+        <section id="when">
+            <span>
+                <h2>When to Play and Managing Time</h2>
+                <h3>Heres how!</h3>
+                <p>The best thing to do when it comes to managing your time while gaming is to set time limits for
+                    yourself.
+                    This can be done using an alarm or parental controls available within some games. Make sure to
+                    prioritize your responsibilities, and remember that gaming is a hobby!
+                </p>
+                <figure>
+                    <img id="gallery" src="images/riverwood.webp" alt="An image of Skyrim from an image gallery.">
+                    <figcaption>A random location in Skyrim, gif made by <a
+                            href="https://oreliel-from-valinor.tumblr.com/tagged/skyrim">oreliel-from-valinor</a>.
+                    </figcaption>
+                </figure>
+                <button id="next">Next</button>
+                <p>
+                    Another tip for managing time would be to play games that have a pause function. If you have a busy
+                    schedule, it would be a good idea to stay away from online multiplayer games that lack a pause and
+                    save function.
+                </p>
+            </span>
+        </section>
+        <section id="how">
+            <span>
+                <h2>How to Get Started in Playing Games?</h2>
+                <h3>Learn how here!</h3>
+                <figure>
+                    <img src="images/morrowwind-shrine.webp" alt="A gif of a shrine, from Morrowwind.">
+                    <figcaption>A shrine in Morrowwind, gif made by <a
+                            href="https://oreliel-from-valinor.tumblr.com/tagged/skyrim">oreliel-from-valinor</a>.
+                    </figcaption>
+                </figure>
+                <ol>
+                    <li>Choose your platform.</li>
+                    <ul>
+                        <li>First things first with video games, pick which platform works for you!
+                            Theres many different thing to consider like cost and availability. With
+                            computer games, physical versions are not as common as they used to be. So,
+                            if you're interested in collecting physical copies of your games, try sticking
+                            to console gaming!</li>
+                    </ul>
+                    <li>Pick a genre.</li>
+                    <ul>
+                        <li>Picking a genre is a key aspect in gaming. Finding a genre may take some time,
+                            or could even be an instantaneous thing for some. Video games have a wide variety
+                            of genres for all kinds of players. Some popular genres are first-person shooters,
+                            role-playing games, simulators, and puzzle games!
+                        </li>
+                    </ul>
+                    <li>Pick up your controller or mouse and keyboard, and learn the controls.</li>
+                    <ul>
+                        <li>For some, this may very well be the hardest step if you haven't been gaming from
+                            a younge age. It takes good hand eye coordination to focus on the screen and not what
+                            your hands are doing on the keyboard or controller. With practice, it will get easier!
+                        </li>
+                    </ul>
+                    <li>Focus on enjoyment, not winning.</li>
+                    <ul>
+                        <li>A key detail in gaming is to focus on enjoying yourself if you choose to pursue it as
+                            a hobby. If you eventually decide to pursue competitive gaming, be sure to still try and
+                            enjoy casual gaming when you can!
+                        </li>
+                    </ul>
+                </ol>
+            </span>
+        </section>
+        <section id="why">
+            <span>
+                <h2>Why should you play video games?</h2>
+                <h3>Video games (in moderation) can be good for you.</h3>
+                <figure>
+                    <img src="images/dragonsreach.webp" alt="A gif of a beach, from Skyrim.">
+                    <figcaption>Dragonsreach from Skyrim, gif made by <a
+                            href="https://oreliel-from-valinor.tumblr.com/tagged/skyrim">oreliel-from-valinor</a>.
+                    </figcaption>
+                </figure>
+                <p>Over the years, many different studies have taken place to see if video games can help or hinder ones
+                    mental health and development. <a
+                        href="https://www.nih.gov/news-events/news-releases/video-gaming-may-be-associated-better-cognitive-performance-children">Studies</a>
+                    show that video games can aid in cognitive performance in children. A repetitive task such as gaming
+                    has been shown to help with memory and
+                    even help children who experience attention-deficit hyperactivity disorder.
+                </p>
+                <p>
+                    Another <a
+                        href="https://www.theesa.com/global-report-reveals-positive-benefits-of-video-gameplay/">study</a>
+                    shows that video games can be a good source of stress relief for those unable to seek such an outlet
+                    elsewhere. Many
+                    that play video games report that they help their mental health, and help them to feel happier in
+                    their day
+                    to day lives.
+                </p>
+                <form>
+                    <fieldset id="question">
+                        <legend>Do you think video games can be beneficial?</legend>
+                        <input required type="radio" name="radio" id="yes-benefit" value="yes"><label
+                            for="yes">Yes</label>
+
+                        <input required type="radio" name="radio" id="no-benefit" value="no"><label for="no">No</label>
+                    </fieldset>
+                    <fieldset id="text-field">
+                        <legend>Why or why not?</legend>
+                        <textarea></textarea>
+                    </fieldset>
+                    <button type="submit" action="#">Submit</button>
+                </form>
+            </span>
+        </section>
+        <footer>
+            <p>Designed by <a href="krupadesigns.co/">Krupa Designs</a> © 2024
+            </p>
+        </footer>
+    </main>
+    <script>
+        function toggleSection(e) {
+            document.getElementById('what').style.display = "none";
+            document.getElementById('who').style.display = "none";
+            document.getElementById('when').style.display = "none";
+            document.getElementById('how').style.display = "none";
+            document.getElementById('why').style.display = "none";
+
+            document.getElementById(e).style.display = "block";
+
+        }
+
+        document.getElementById("what-btn").addEventListener("click", function (event) {
+            toggleSection("what");
+        });
+
+        document.getElementById("who-btn").addEventListener("click", function (event) {
+            toggleSection("who");
+        });
+
+        document.getElementById("when-btn").addEventListener("click", function (event) {
+            toggleSection("when");
+        });
+
+        document.getElementById("how-btn").addEventListener("click", function (event) {
+            toggleSection("how");
+        });
+
+        document.getElementById("why-btn").addEventListener("click", function (event) {
+            toggleSection("why");
+        });
+
+        var imgNum = 1;
+        var gallery = document.getElementById("gallery");
+
+        document.getElementById('next').addEventListener("click", () => {
+            imgNum++;
+            if (imgNum <= 3) {
+                switch (imgNum) {
+                    case 1:
+                        gallery.src = "images/riverwood.webp";
+                        break;
+                    case 2:
+                        gallery.src = "images/riften-area.webp";
+                        break;
+                    case 3:
+                        gallery.src = "images/dragonsbridge.webp";
+                        break;
+                }
+            } else {
+                imgNum = 1;
+                gallery.src = "images/riverwood.webp";
+            }
+        });
+    </script>
+</body>
+
+</html>
