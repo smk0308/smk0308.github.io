@@ -44,15 +44,20 @@ courseButton.addEventListener("click", function () {
 
 });
 
+function changeImgSrc(newSrc) { 
+    var image = document.getElementById("user-image");
+    image.src = newSrc;
+}
+
 /* Create elements from */
 function createPage() {
     document.getElementById("form-section").style.display = "none";
     document.getElementById("user-section").style.display = "block";
     /* Handle Image Upload */
 
-    const userImage = document.getElementById("user-image");
-    const imageFile = document.getElementById("image");
-    userImage.src = imageFile.value;
+    var newImageSource = document.getElementById("image-input").value;
+    var image = document.getElementById('user-image');
+    image.setAttribute('src', newImageSource);
 
 
     document.getElementById("user-fig").innerHTML = `<i>${document.getElementById("caption").value}</i>`
