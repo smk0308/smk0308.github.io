@@ -51,11 +51,11 @@
             text-align: center;
         }
 
-        #form-section{
+        #form-section {
             display: block;
         }
 
-        #user-section{
+        #user-section {
             display: none;
         }
     </style>
@@ -68,157 +68,151 @@
     <main>
         <section id="form-section">
             <h2>BYO Intro</h2>
-        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page! ◝(ᵔᗜᵔ)◜</h3>
-        <form id="byo-form">
-            <table>
-                <tr>
-                    <td>
-                        <label for="name"><b>Name</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input required type="text" name="name" id="name"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="mascot"><b>Mascot</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input required type="text" name="mascot" id="mascot"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="image"><b>Image</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="file" id="image" accept="image/png, image/jpeg">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="image-caption"><b>Image Caption</b></label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="caption" id="caption">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="personal-background"><b>Personal Background</b></label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="personal-background" id="personal-background">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="professional-background"><b>Professional Background</b></label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="professional-background" id="professional-background">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="academic-background"><b>Academic Background</b></label></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="academic-background" id="academic-background">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="web-background"><b>Background in Web Development</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="web-background" id="web-background">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="platform"><b>Primary Computer Platform</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input required type="text" name="platform" id="platform">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="courses"><b>Courses Currently Taking</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="course-list"></div>
-                        <button type="button" name="courses" id="courses-button">Add Course</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="funny"><b>Funny tidbit about yourself?</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="funny" id="funny">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="anything"><b>Anything Else?</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="anything" id="anything">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="agree">
-                            <input required type="checkbox" id="agree"> I understand that what is on this page is not password
-                            protected and I will not put anything here that I don’t want publicly available.
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><button type="submit" value="Submit" id="submit">Submit</button> <button type="reset"
-                            value="Reset" id="reset">Reset</button></td>
-                </tr>
-            </table>
-        </form>
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page! ◝(ᵔᗜᵔ)◜</h3>
+            <form id="byo-form">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name"><b>Name</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input required type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mascot"><b>Mascot</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input required type="text" name="mascot" id="mascot"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="image-input"><b>Image</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="file" id="image-input" accept="image/*">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="image-caption"><b>Image Caption</b></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="caption" id="caption">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="personal-background"><b>Personal Background</b></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="personal-background" id="personal-background">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="professional-background"><b>Professional Background</b></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="professional-background" id="professional-background">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="academic-background"><b>Academic Background</b></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="academic-background" id="academic-background">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="web-background"><b>Background in Web Development</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="web-background" id="web-background">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="platform"><b>Primary Computer Platform</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input required type="text" name="platform" id="platform">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="courses"><b>Courses Currently Taking</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="course-list"></div>
+                            <button type="button" name="courses" id="courses-button">Add Course</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="funny"><b>Funny tidbit about yourself?</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="funny" id="funny">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="anything"><b>Anything Else?</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="anything" id="anything">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="agree">
+                                <input required type="checkbox" id="agree"> I understand that what is on this page is
+                                not password
+                                protected and I will not put anything here that I don’t want publicly available.
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" value="Submit" id="submit">Submit</button> <button type="reset"
+                                value="Reset" id="reset">Reset</button></td>
+                    </tr>
+                </table>
+            </form>
         </section>
         <section id="user-section">
             <h3 id="user-name"></h3>
             <figure>
-                <img src=""
-                    alt="">
-                <figcaption id="user-fig"><i></i></figcaption>
+                <img src="" alt="" id="user-image">
+                <figcaption id="user-fig"></figcaption>
             </figure>
             <ul>
-                <li><b>Personal Background: </b><div id="user-personal"></div>
+                <li id="user-personal"></li>
+                <li id="user-professional"></li>
+                <li id="user-academic"></li>
+                <li id="user-web"></li>
+                <li id="user-platform"></li>
+                <li>Courses I'm Taking and Why:
+                    <ul id="course-list-ul"></ul>
                 </li>
-                <li><b>Professional Background: </b><div id="user-professional"></div>
-                </li>
-                <li><b>Academic Background: </b><div id="user-academic"></div></li>
-                <li><b>Background in this Subject: </b><div id="user-web"></div>
-                </li>
-                <li><b>Primary Computer Platform: </b><div id="user-platform"></div></li>
-                <li><b>Courses I'm Taking and Why: </b>
-                    <ul>
-                        <div id="user-courses"></div>
-                        <div id="test-result">E</div>
-                    </ul>
-                </li>
-                <li><b>Funny/Interesting Item to Remember Me By: </b><div id="user-funny"></div></li>
-                <li><b>I'd Also Like to Share: </b><div id="user-extra"></div></li>
+                <li id="user-funny"></li>
+                <li id="user-extra"></li>
             </ul>
             <div id="user-reset"></div>
         </section>

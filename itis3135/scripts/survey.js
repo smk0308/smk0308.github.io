@@ -1,21 +1,16 @@
 /* Function to validate form */
 function validateForm() {
-    var fields = ['name', 'mascot', 'caption',
-        'personal-background', 'professional-background', 'academic-background',
-        'web-background', 'platform'];
+    const requiredInput = form.querySelectorAll('input[required]');
 
-    for (let i = 0; i < fields.length - 1; i++) {
-        const value = document.getElementById(fields[i]).value.trim("");
-        if (value === "") {
-            return false;
+    let emptyForm = false;
+
+    requiredInput.forEach((input) => {
+        if (input.value.trim() === "") {
+            emptyForm = true;
         }
-    }
+    });
 
-    if (!document.getElementById("agree").checked) {
-        return false;
-    }
-
-    return true;
+    return emptyForm;
 }
 
 
@@ -35,8 +30,8 @@ var counter = 1;
 courseButton.addEventListener("click", function () {
     const courseList = document.getElementById("course-list");
     const newDiv = document.createElement('div');
-    newDiv.id = 'div-${counter}';
-    newDiv.innerHTML += `<br><span>Course #: ${counter}</span><input type="text" id="course-${counter}">`;
+    newDiv.id = `div-${counter}`;
+    newDiv.innerHTML += `<br><span>Course #: ${counter}</span><input type="text" id="course-${counter}"><span>Course Info</span><input type="text" id="course-info-${counter}">`;
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete";
@@ -50,31 +45,47 @@ courseButton.addEventListener("click", function () {
 });
 
 /* Create elements from */
-function createPage() { 
-    if (validateForm) { 
-        document.getElementById("form-section").style.display = "none";
-        document.getElementById("user-section").style.display = "block";
-        document.getElementById("user-name").innerText = document.getElementById("name").value + " " + document.getElementById("mascot").value;
-        document.getElementById("user-personal").innerText = document.getElementById("personal-background").value;
-        document.getElementById("user-academic").innerText = document.getElementById("academic-background").value;
-        document.getElementById("user-web").innerText = document.getElementById("web-background").value;
-        document.getElementById("user-platform").innerText = document.getElementById("platform").value;
-        document.getElementById("user-funny").innerText = document.getElementById("funny").value;
-        document.getElementById("user-extra").innerText = document.getElementById("anything").value;
-        
-        document.getElementById('test-result').innerText = "What the hell";
-        const userCourses = document.getElementById("user-courses");
-        for (let i = 1; i < counter; i++) { 
-            userCourses.appendChild(document.getElementById(`div-${counter}`));
-        }
-        
-        const resetFormButton = document.createElement('button');
-        resetFormButton.textContent = "Reset Form";
-        resetFormButton.onclick = reset();
+function createPage() {
+    document.getElementById("form-section").style.display = "none";
+    document.getElementById("user-section").style.display = "block";
+    /* Handle Image Upload */
+
+    const userImage = document.getElementById("user-image");
+    const imageFile = document.getElementById("image");
+    userImage.src = imageFile.value;
+
+
+    document.getElementById("user-fig").innerHTML = `<i>${document.getElementById("caption").value}</i>`
+    document.getElementById("user-name").innerText = document.getElementById("name").value + " " + document.getElementById("mascot").value;
+    document.getElementById("user-personal").innerText = "Personal Background: " + document.getElementById("personal-background").value;
+    document.getElementById("user-academic").innerText = "Professional Background: " + document.getElementById("academic-background").value;
+    document.getElementById("user-web").innerText = "Background in Web Development: " + document.getElementById("web-background").value;
+    document.getElementById("user-platform").innerText = "Primary Computer Platform: " + document.getElementById("platform").value;
+    document.getElementById("user-funny").innerText = "Funny/Interesting Item to Remember me by: " + document.getElementById("funny").value;
+    document.getElementById("user-extra").innerText = "I'd Also Like to Share: " + document.getElementById("anything").value;
+
+
+    const courseList = document.getElementById("course-list-ul");
+    var containerDiv = document.getElementById("course-list");
+    for (let i = 0; i < containerDiv.getElementsByTagName("div").length; i++) {
+        var li = document.createElement("li");
+        var courseDivId = (containerDiv.childNodes[i].id).slice(-1);
+        li.appendChild(document.createTextNode(document.getElementById(`course-${courseDivId}`).value + ': ' + document.getElementById(`course-info-${courseDivId}`).value));
+        courseList.appendChild(li);
     }
+
+    const resetFormButton = document.createElement('button');
+    resetFormButton.textContent = "Reset Form";
+    resetFormButton.onclick = function () {
+        window.location.reload();
+    }
+    document.getElementById("user-reset").appendChild(resetFormButton);
 }
 
-document.getElementById("submit").addEventListener("click", function (event) { 
-    event.preventDefault();
+
+document.getElementById("submit").addEventListener("click", function (event) {
+    if (validateForm) {
+        event.preventDefault();
+    }
     createPage();
 });
