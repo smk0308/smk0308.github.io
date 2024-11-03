@@ -9,6 +9,7 @@ html {
 
 body {
     text-align: center;
+    
 }
 
 main {
@@ -88,12 +89,11 @@ h2:hover {
 }
 
 img {
-    max-width: 20%;
+    max-width: 30%;
 }
 
 img:hover {
     transform: scale(1.05);
-    filter: blur(1px);
     z-index: -1;
 }
 
