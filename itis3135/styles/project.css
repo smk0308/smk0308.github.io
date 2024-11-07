@@ -52,27 +52,6 @@ h1 {
 }
 
 
-#home-section {
-    display: block;
-}
-
-#character-section {
-    display: none;
-}
-
-#dm-section {
-    display: none;
-}
-
-#apply-section {
-    display: none;
-}
-
-#campaign-section {
-    display: none;
-}
-
-
 /* Footer */
 footer {
     position: fixed;

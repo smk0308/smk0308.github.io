@@ -8,16 +8,12 @@ const names = ["Karn Thunderheart", "Elaris Frostsong",
     "Lunara Duskwhisper", "Maelis Frostspark", "Briar Blackthorn",
     "Vesper Thievesbane", "Glimmer Stonehart", "Wren Firewhisper",
     "Kestrel Fizzleforge", "Pip Hearthcaster"];
-    console.log(document.getElementById("chara-name"));
-    console.log(document.getElementById("name-change"));
 
-document.addEventListener("DOMContentLoaded", () => {
-    nameButton.addEventListener("click", () => {
-        const randomName = Math.floor(Math.random() * names.length);
-        charaName.textContent = names[randomName];
-    });
+
+nameButton.addEventListener("click", () => {
+    const randomName = Math.floor(Math.random() * names.length);
+    charaName.textContent = names[randomName];
 });
-
 
 
 
@@ -66,10 +62,8 @@ radios.forEach((radio) => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("race-dropdown").addEventListener("change", function (event) {
-        dispRadio();
-    });
+document.getElementById("race-dropdown").addEventListener("change", function (event) {
+    dispRadio();
 });
 
 /* Stat changes */
@@ -262,13 +256,12 @@ document.getElementById("reset-form").addEventListener("click", () => {
     document.getElementById("character-form").reset();
 });
 
-console.log("MADE IT");
-/* Image gallery */
-let num = 1;
-let galleryImage = document.getElementById("gallery-image");
-const nextButton = document.getElementById("next-button");
 
-nextButton.addEventListener("click", () => {
+/* Image gallery */
+var num = 1;
+var gallery = document.getElementById("gallery");
+
+document.getElementById("next").addEventListener("click", () => {
     num++;
     console.log(`Current num: ${num}`);
     if (num > 5) {
@@ -276,19 +269,19 @@ nextButton.addEventListener("click", () => {
     }
     switch (num) {
         case 1:
-            galleryImage.src = "../images/dnddwarf.png";
+            gallery.src = "../images/dnddwarf.png";
             break;
         case 2:
-            galleryImage.src = "../images/faerun.jpg";
+            gallery.src = "../images/faerun.jpg";
             break;
         case 3:
-            galleryImage.src = "../images/beholder.jpg";
+            gallery.src = "../images/beholder.jpg";
             break;
         case 4:
-            galleryImage.src = "../images/baldursgate.jpg";
+            gallery.src = "../images/baldursgate.jpg";
             break;
         case 5:
-            galleryImage.src = "../images/neverwinter.png";
+            gallery.src = "../images/neverwinter.png";
             break;
     }
 });

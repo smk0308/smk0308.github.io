@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/midterm.css">
+    <link rel="stylesheet" href="../styles/project.css">
     <title>Home</title>
 </head>
     
@@ -14,81 +14,89 @@
         <div data-include="../components/project_header.html"></div>
     </header>
     <main>
-        <h1>Apply</h1>
-        <form>
-            <table>
-                <tr>
-                    <td><label for="name"><b>Name</b></label></td>
-                </tr>
-                <tr>
-                    <td><input required type="text" id="name" name="name" placeholder="ex. John Smith"></td>
-                </tr>
-                <tr>
-                    <td><label for="phone-number"><b>Phone Number</b></label></td>
-                </tr>
-                <tr>
-                    <td><input required type="number" id="phone-number" name="phone-number"
-                            placeholder="ex. (999)-123-4567"></td>
-                </tr>
-                <tr>
-                    <td><label for="email"><b>Email</b></label></td>
-                </tr>
-                <tr>
-                    <td><input required type="email" id="email" name="email" placeholder="ex. calicokitty@gmail.com">
+            <h1>Apply</h1>
+            <form>
+                <table id="application-table">
+                    <tr>
+                        <th>Interested in joining the campaign? Sign up now!</th>
+                    </tr>
+                    <tr>
+                        <td><label for="name"><b>Name</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><input required type="text" id="name" name="name" placeholder="Enter your name. ex. Gale Waterdeep"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone-number"><b>Phone Number</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><input required type="tel" id="phone-number" name="phone-number"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter a valid phone number. ex. 111-222-3333"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email"><b>Email</b></label></td>
+                    </tr>
+                    <tr>
+                        <td><input required type="email" id="email" name="email" placeholder="Enter a valid email. ex. tieflingluvr@aol.net">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <legend><b>Whats your favorite class?</b></legend>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="barbarian" id="barbarian"><label for="barbarian">Barbarian</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="bard" id="bard"><label for="bard">Bard</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="rogue" id="rogue"><label for="rogue">Rogue</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="sorcerer" id="sorcerer"><label for="sorcerer">Sorcerer</label></td>
+                    </tr>   
+                    <tr>
+                        <td><input type="checkbox" name="other" id="other"><label for="other">Other</label></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><legend><b>Would you like to join our discord?</b></legend></td>
+                    </tr>
+                    <fieldset>
+                        <tr>
+                            <td><input required type="radio" name="radio" id="yes" value="yes"><label for="yes">Yes</label></td>
+                        </tr>
+                        <tr>
+                            <td><input required type="radio" name="radio" id="no" value="no"><label for="no">No</label></td>
+                        </tr>
+                    </fieldset>
+                    <tr>
+                        <td><b>How did you hear about us?</b></td>
+                    </tr>
+                    <tr>
+                        <td><select name="how-heard-dropdown" id="how-heard-dropdown" required>
+                                <option disabled selected value=""> Please select an option.</option>
+                                <option value="friend">Through a friend.</option>
+                                <option value="family">From a family member.</option>
+                                <option value="google">Google search.</option>
+                                <option value="no-answer">Prefer not to answer.</option>
+                            </select></td>
+                    </tr>
+                    <td><button type="submit" action="#">Submit</button>
+                        <button type="reset" action="#">Reset</button>
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <legend><b>Whats your favorite class?</b></legend>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="barbarian"><input required type="checkbox" name="barbarian">Barbarian</label></td>
-                </tr>
-                <tr>
-                    <td><label for="bard"><input required type="checkbox" name="bard">Bard</label></td>
-                </tr>
-                <tr>
-                    <td><label for="rogue"><input required type="checkbox" name="rogue">Rogue</label></td>
-                </tr>
-                <tr>
-                    <td><label for="sorcerer"><input required type="checkbox" name="sorcerer">Sorcerer</label></td>
-                </tr>
-                <tr>
-                    <td><label for="other"><input required type="checkbox" name="other">Other</label></td>
-                </tr>
-                <tr>
-                    <td><label for="radio"><b>Would you like alerts about new products?</b></label></td>
-                </tr>
-                <tr>
-                    <td><input required type="radio" name="radio" value="yes">Yes</td>
-                </tr>
-                <tr>
-                    <td><input required type="radio" name="radio" value="no">No</td>
-                </tr>
-                <tr>
-                    <td><label for="how-heard-dropdown"><b>How did you hear about us?</b></label></td>
-                </tr>
-                <tr>
-                    <td><select name="how-heard-dropdown" id="how-heard-dropdown">
-                            <option disabled selected> Please select an option.</option>
-                            <option>Through a friend.</option>
-                            <option>From a family member.</option>
-                            <option>Google search.</option>
-                            <option>Prefer not to answer.</option>
-                        </select></td>
-                </tr>
-                <td><button type="submit" action="#">Submit</button>
-                    <button type="button" action="#">Reset</button></td>
-            </table>
-        </form>
-        <img src="../images/dice.png">
+                </table>
+            </form>
+            <img src="../images/dice.png" id="bg-img" alt="A red dungeons and dragons dice.">
     </main>
     <footer>
         <hr>
         <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
     </footer>
-    <script src="../scripts/midterm.js"></script>
+    <script src="../scripts/project.js"></script>
     <script src="../scripts/include.js"></script>
 </body>
 

@@ -76,8 +76,8 @@
                     <td><label for="phone-number"><b>Phone Number</b></label></td>
                 </tr>
                 <tr>
-                    <td><input required type="number" id="phone-number" name="phone-number"
-                            placeholder="ex. (999)-123-4567"></td>
+                    <td><input required type="tel" id="phone-number" name="phone-number"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="ex. 999-123-4567"></td>
                 </tr>
                 <tr>
                     <td><label for="email"><b>Email</b></label></td>
@@ -92,19 +92,19 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="calico"><input required type="checkbox" name="calico">Calico</label></td>
+                    <td><label for="calico"><input type="checkbox" name="calico">Calico</label></td>
                 </tr>
                 <tr>
-                    <td><label for="bombay"><input required type="checkbox" name="bombay">Bombay</label></td>
+                    <td><label for="bombay"><input type="checkbox" name="bombay">Bombay</label></td>
                 </tr>
                 <tr>
-                    <td><label for="tuxedo"><input required type="checkbox" name="tuxedo">Tuxedo</label></td>
+                    <td><label for="tuxedo"><input type="checkbox" name="tuxedo">Tuxedo</label></td>
                 </tr>
                 <tr>
-                    <td><label for="tabby"><input required type="checkbox" name="tabby">Tabby</label></td>
+                    <td><label for="tabby"><input type="checkbox" name="tabby">Tabby</label></td>
                 </tr>
                 <tr>
-                    <td><label for="other"><input required type="checkbox" name="other">Other</label></td>
+                    <td><label for="other"><input type="checkbox" name="other">Other</label></td>
                 </tr>
                 <tr>
                     <td><label for="radio"><b>Would you like alerts about new products?</b></label></td>
@@ -119,12 +119,12 @@
                     <td><label for="how-heard-dropdown"><b>How did you hear about us?</b></label></td>
                 </tr>
                 <tr>
-                    <td><select name="how-heard-dropdown" id="how-heard-dropdown">
-                            <option disabled selected> Please select an option.</option>
-                            <option>Through a friend.</option>
-                            <option>From a family member.</option>
-                            <option>Google search.</option>
-                            <option>Prefer not to answer.</option>
+                    <td><select name="how-heard-dropdown" id="how-heard-dropdown" required>
+                            <option disabled selected value=""> Please select an option.</option>
+                            <option value="friend">Through a friend.</option>
+                            <option value="family">From a family member.</option>
+                            <option value="google">Google search.</option>
+                            <option value="no-answer">Prefer not to answer.</option>
                         </select></td>
                 </tr>
             </table>

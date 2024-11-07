@@ -4,31 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/midterm.css">
+    <link rel="stylesheet" href="../styles/project.css">
     <title>Campaign Info</title>
 </head>
 
 <body>
     <header>
-       
         <div data-include="../components/project_header.html"></div>
     </header>
     <main>
         <h1>Campaign Info</h1>
-        <p class="home-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-        <img src="../images/dice.png">
+            <span id="campaign-content">
+                <p>The world is in danger. An ancient evil sealed within the core of Faerûn is
+                    about to be unveiled. Creatures of mythic proportions roam the lands. Human,
+                    dwarven, and elfin lives are at stake. Heroes from all over the world must band
+                    together to stop the evil from terrorizing the lands of Faerûn. The cities of
+                    Baldur's Gate, Neverwinter, and Waterdeep hold a relic of power that may help
+                    our intrepid heroes to ward off the evil plaguing these lands.
+                </p>
+                <p>As it stands, all three of the relics of power have been found by the heroes
+                    of Faerûn. But, at what costs? Many heroes have fallen. The cities have been
+                    razed by the cultists that wish to resurrect the ancient evil.
+                </p>
+                <p>This campaign is a collaborative effort between three separate campaigns
+                    being ran concurrently. The entirety of the campaign is to be completed in one
+                    glorious overarching campaign. So far, two of the campaigns have completed their
+                    task in gather a relic of power. The last has collected their relic of power,
+                    but their party was destroyed in the process. A lone survivor of that party
+                    will attempt to join the other campaigns and battle the evil.
+                </p>
+                <table id="gallery" role="presentation">
+                    <tr>
+                        <td colspan="3">
+                            <img src="../images/dnddwarf.png" id="gallery-image" alt="A DnD image from an image gallery.">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" id="next-button">Next</button></td>
+                    </tr>
+                </table>
+            </span>
     </main>
     <footer>
         <hr>
         <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
     </footer>
-    <script src="../scripts/midterm.js"></script>
     <script src="../scripts/include.js"></script>
+    <script src="../scripts/project.js"></script>
 </body>
 
 </html>
