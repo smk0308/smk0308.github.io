@@ -1,3 +1,4 @@
+
 /* Name randomization */
 const charaName = document.getElementById("chara-name");
 const nameButton = document.getElementById("name-change");
@@ -8,18 +9,13 @@ const names = ["Karn Thunderheart", "Elaris Frostsong",
     "Lunara Duskwhisper", "Maelis Frostspark", "Briar Blackthorn",
     "Vesper Thievesbane", "Glimmer Stonehart", "Wren Firewhisper",
     "Kestrel Fizzleforge", "Pip Hearthcaster"];
-    console.log(document.getElementById("chara-name"));
-    console.log(document.getElementById("name-change"));
 
-document.addEventListener("DOMContentLoaded", () => {
+if (nameButton != null) {
     nameButton.addEventListener("click", () => {
         const randomName = Math.floor(Math.random() * names.length);
         charaName.textContent = names[randomName];
     });
-});
-
-
-
+}
 
 
 /* Avatar Changing */
@@ -27,7 +23,6 @@ var avatar = document.getElementById("avatar");
 var gender = document.getElementsByName("gender");
 
 function dispRadio() {
-
     for (i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
             if (gender[i].value === "male") {
@@ -75,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Stat changes */
 var userClass = document.getElementById("class-dropdown");
 var result = document.getElementById("result");
-var classValue = document.getElementById("class-dropdown").value;
 
 
 /* Base stats */
@@ -196,7 +190,6 @@ document.getElementById("str-plus").addEventListener('click', function (event) {
     incBase('str-base', 'str-mod');
 });
 
-
 document.getElementById("str-minus").addEventListener('click', function (event) {
     decBase('str-base', 'str-mod');
 });
@@ -262,35 +255,5 @@ document.getElementById("reset-form").addEventListener("click", () => {
     document.getElementById("character-form").reset();
 });
 
-console.log("MADE IT");
-/* Image gallery */
-let num = 1;
-let galleryImage = document.getElementById("gallery-image");
-const nextButton = document.getElementById("next-button");
-
-nextButton.addEventListener("click", () => {
-    num++;
-    console.log(`Current num: ${num}`);
-    if (num > 5) {
-        num = 1;
-    }
-    switch (num) {
-        case 1:
-            galleryImage.src = "../images/dnddwarf.png";
-            break;
-        case 2:
-            galleryImage.src = "../images/faerun.jpg";
-            break;
-        case 3:
-            galleryImage.src = "../images/beholder.jpg";
-            break;
-        case 4:
-            galleryImage.src = "../images/baldursgate.jpg";
-            break;
-        case 5:
-            galleryImage.src = "../images/neverwinter.png";
-            break;
-    }
-});
 
 

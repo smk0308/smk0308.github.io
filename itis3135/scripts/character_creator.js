@@ -1,3 +1,4 @@
+
 /* Name randomization */
 const charaName = document.getElementById("chara-name");
 const nameButton = document.getElementById("name-change");
@@ -9,13 +10,12 @@ const names = ["Karn Thunderheart", "Elaris Frostsong",
     "Vesper Thievesbane", "Glimmer Stonehart", "Wren Firewhisper",
     "Kestrel Fizzleforge", "Pip Hearthcaster"];
 
-
-nameButton.addEventListener("click", () => {
-    const randomName = Math.floor(Math.random() * names.length);
-    charaName.textContent = names[randomName];
-});
-
-
+if (nameButton != null) {
+    nameButton.addEventListener("click", () => {
+        const randomName = Math.floor(Math.random() * names.length);
+        charaName.textContent = names[randomName];
+    });
+}
 
 
 /* Avatar Changing */
@@ -23,7 +23,6 @@ var avatar = document.getElementById("avatar");
 var gender = document.getElementsByName("gender");
 
 function dispRadio() {
-
     for (i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
             if (gender[i].value === "male") {
@@ -62,14 +61,15 @@ radios.forEach((radio) => {
     });
 });
 
-document.getElementById("race-dropdown").addEventListener("change", function (event) {
-    dispRadio();
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("race-dropdown").addEventListener("change", function (event) {
+        dispRadio();
+    });
 });
 
 /* Stat changes */
 var userClass = document.getElementById("class-dropdown");
 var result = document.getElementById("result");
-var classValue = document.getElementById("class-dropdown").value;
 
 
 /* Base stats */
@@ -190,7 +190,6 @@ document.getElementById("str-plus").addEventListener('click', function (event) {
     incBase('str-base', 'str-mod');
 });
 
-
 document.getElementById("str-minus").addEventListener('click', function (event) {
     decBase('str-base', 'str-mod');
 });
@@ -238,52 +237,5 @@ document.getElementById("con-minus").addEventListener('click', function (event) 
 
 /* Reset Form to Starting Values */
 document.getElementById("reset-form").addEventListener("click", () => {
-    avatar.src = avatar.src = "../images/dwarf_female.png";
-    charaName.innerText = "Kestrel Fizzleforge";
-    document.getElementById("points").innerText = "10";
-    strBase.innerText = "15";
-    strMod.innerText = "3";
-    dexBase.innerText = "10";
-    dexMod.innerText = "0";
-    conBase.innerText = "15";
-    conMod.innerText = "2";
-    intBase.innerText = "8";
-    intMod.innerText = "0";
-    wisBase.innerTest = "11";
-    wisMod.innerText = "0";
-    chrBase.innerText = "12";
-    chrMod.innerText = "1";
-    document.getElementById("character-form").reset();
+    window.location.reload();
 });
-
-
-/* Image gallery */
-var num = 1;
-var gallery = document.getElementById("gallery");
-
-document.getElementById("next").addEventListener("click", () => {
-    num++;
-    console.log(`Current num: ${num}`);
-    if (num > 5) {
-        num = 1;
-    }
-    switch (num) {
-        case 1:
-            gallery.src = "../images/dnddwarf.png";
-            break;
-        case 2:
-            gallery.src = "../images/faerun.jpg";
-            break;
-        case 3:
-            gallery.src = "../images/beholder.jpg";
-            break;
-        case 4:
-            gallery.src = "../images/baldursgate.jpg";
-            break;
-        case 5:
-            gallery.src = "../images/neverwinter.png";
-            break;
-    }
-});
-
-

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/project.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>Character Creation</title>
 </head>
 
@@ -18,21 +19,27 @@
             <table id="character-creator">
                 <div id="test-div"></div>
                 <tr>
-                    <td rowspan="2"><img src="../images/dwarf_female.png" id="avatar" alt="An AI generated image of a DnD character."> </td>
-                    <td colspan="4" id="name-cell"><span id="name-row">Name: 
-                        <div id="chara-name">
-                            Kestrel Fizzleforge</div>
-                            </span>
+                    <td rowspan="2"><img src="../images/dwarf_female.png" id="avatar"
+                            alt="An AI generated image of a DnD character."> </td>
+                    <td colspan="4" id="name-cell"><span id="name-row">Name:
+                            <div id="chara-name">
+                                Kestrel Fizzleforge
+                            </div>
+                        </span>
                     </td>
                     <td><button type="button" id="name-change">Roll</button></td>
                 </tr>
                 <tr>
-                    <td><legend for="radio">Gender:</legend></td>
+                    <td>
+                        <legend for="radio">Gender:</legend>
+                    </td>
                     <td colspan="2">
                         <fieldset>
-                            <input required type="radio" name="gender" value="male" id="male"><label for="male">♂</label>
-                            <input required type="radio" name="gender" value="female" id="female" checked="checked"><label for="female">♀</label>
-                    </fieldset>
+                            <input required type="radio" name="gender" value="male" id="male"><label
+                                for="male">♂</label>
+                            <input required type="radio" name="gender" value="female" id="female"
+                                checked="checked"><label for="female">♀</label>
+                        </fieldset>
                     </td>
                 </tr>
                 <tr>
@@ -42,17 +49,18 @@
                 <tr>
                     <td rowspawn="2">
                         <select name="class-dropdown" id="class-dropdown">
-                            <option selected="selected">Barbarian</option>
-                            <option>Bard</option>
-                            <option>Rogue</option>
-                            <option>Sorcerer</option>
+                            <option selected="selected" value="Barbarian">Barbarian</option>
+                            <option value="Bard">Bard</option>
+                            <option value="Rogue">Rogue</option>
+                            <option value="Sorcerer">Sorcerer</option>
                         </select>
                     </td>
                     <td rowspawn="2"><select name="race-dropdown" id="race-dropdown">
-                            <option selected="selected">Dwarf</option>
-                            <option>Human</option>
-                            <option>Elf</option>
-                        </select></td>
+                            <option selected="selected" value="Dwarf">Dwarf</option>
+                            <option value="Human">Human</option>
+                            <option value="Elf">Elf</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -172,8 +180,8 @@
         <hr>
         <p>Designed by <a href="../krupadesigns.co/index.html">Krupa Designs</a> © 2024</p>
     </footer>
+    <script src="../scripts/character_creator.js"></script>
     <script src="../scripts/include.js"></script>
-    <script src="../scripts/project.js"></script>
 </body>
 
 </html>
