@@ -8,17 +8,21 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         html {
-            background: linear-gradient(#DCD6F7, #A6B1E1);
+            background: linear-gradient(#0E0F19 75%, #172129);
             background-attachment: fixed;
-            margin: auto;
-            width: 50%;
             align-content: center;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
         }
 
         body {
-            color: #161615;
+            color: #ffffff;
             text-align: left;
+            margin: auto;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+            font-weight: 700;
+            font-size: 1.25rem;
         }
 
         img {
@@ -34,59 +38,57 @@
             top: 79px;
             width: 100%;
             height: 2px;
-            background-color: #EAEBED;
+            background-color: #0E0F19;
             z-index: 1;
-            box-shadow: 0px 0px 5px 5px #EAEBED;
+            
         }
 
-        #nav-bg {
+        #header-bg {
             position: fixed;
             top: 0;
-            background-color: #EAEBED;
+            background-color: #0E0F19;
             width: 100%;
             height: 11.5%;
             z-index: 0;
         }
 
-        nav {
+        header {
             position: fixed;
             top: 2.5%;
             left: 44%;
             font-size: 2rem;
             margin-left: 0;
-            color: #4E4C67;
+            color: #57886C;
             z-index: 1;
             white-space: nowrap;
             overflow: hidden;
         }
 
-        nav a {
-            color: #4E4C67;
+        header a {
+            color: #ffffff;
             text-decoration: none;
             margin: 0;
             padding: 20px;
+            font-weight: 100;
             text-decoration: none;
         }
 
-        nav a:hover {
-            color: #B4869F;
+        header a:hover {
+            color: #75a3a3;
             transform: scale(1.1);
             text-decoration: none;
         }
 
-        nav a:visited {
-            color: #4E4C67;
+        header a:visited {
+            color: #516769;
             text-decoration: none;
         }
 
         main {
             position: absolute;
             top: 15%;
-            margin: auto;
-            padding: 0px;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
+            left: 25%;
+            max-width: 700px;
             z-index: -1;
             word-wrap: break-word;
         }
@@ -99,34 +101,37 @@
         }
 
         #main-bg {
-            background-color: #EAEBED;
+            margin: auto;
+            left: 15%;
             height: 100%;
-            width: 60%;
+            width: 800px;
             position: fixed;
             z-index: -2;
-            box-shadow: 0px 0px 5px 55px #EAEBED;
         }
 
         h1,
         h2,
         h3 {
-            color: #A6B1E1;
-            text-shadow: 1px 1px 1px #4E4C67;
+            color: #86b1b5;
         }
 
         ul {
             list-style-type: circle;
         }
+
+        p,ul{
+            font-weight: 200;
+        }
     </style>
 </head>
 
 <body>
-    <img src="/itis3135/images/krupadesign-logo-final.png" alt="Krupa Designs logo with text underneath that says Designs That Inspire And Transform">
-    <nav>
+    <img src="../images/white_logo.png" alt="Krupa Designs logo with text underneath that says Designs That Inspire And Transform">
+    <header>
         <a href="./">Home</a> <a href="./">About</a> <a href="./">Contact</a>
-    </nav>
+    </header>
     <div id="bar"></div>
-    <div id="nav-bg"></div>
+    <div id="header-bg"></div>
     <main>
         <h1>Krupa Designs</h1>
         <h2>Home</h2>
