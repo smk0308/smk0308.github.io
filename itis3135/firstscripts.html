@@ -61,7 +61,9 @@
 
 <body>
     <header>
-        <div data-include="components/header.html"></div>
+        <nav id="nav-menu"></nav>
+		<nav id="nav-submenu"></nav>
+		<hr>
     </header>
     <main>
         <h2>First Scripts</h2>
@@ -193,9 +195,14 @@
         </form>
     </main>
     <footer>
-        <div data-include="components/footer.html"></div>
+        <hr>
+		<nav id="nav-footer"></nav>
+		<nav id="nav-subfooter"></nav>
     </footer>
-    <script src="scripts/include.js"></script>
+    <script src="components/nav_menu.js"></script>
+	<script src="components/nav_submenu.js"></script>
+	<script src="components/nav_footer.js"></script>
+	<script src="components/nav_subfooter.js"></script>
     <script src="scripts/defaultscripts.js"></script>
 </body>
 
